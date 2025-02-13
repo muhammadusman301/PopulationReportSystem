@@ -1,0 +1,13 @@
+user Stories
+1. As a user, I want to view all countries sorted by population.
+2. As a user, I want to view all cities sorted by population.
+3. As a user, I want to see the top N populated countries/cities.
+4. As a user, I want to generate population reports.
+5. As a user, I want to fetch language speaker statistics.
+
+ Tasks Breakdown
+Set up database connection in C#.
+Implement SQL queries for population sorting.
+Develop API endpoints for fetching data.
+Create a user interface to display reports.
+Write unit tests to validate results.
