@@ -1,0 +1,14 @@
+D:\Usman\PopulationDataAPP\PopulationDataApp\bin\Debug\net8.0\PopulationDataApp.exe
+D:\Usman\PopulationDataAPP\PopulationDataApp\bin\Debug\net8.0\PopulationDataApp.deps.json
+D:\Usman\PopulationDataAPP\PopulationDataApp\bin\Debug\net8.0\PopulationDataApp.runtimeconfig.json
+D:\Usman\PopulationDataAPP\PopulationDataApp\bin\Debug\net8.0\PopulationDataApp.dll
+D:\Usman\PopulationDataAPP\PopulationDataApp\bin\Debug\net8.0\PopulationDataApp.pdb
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\PopulationDataApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\PopulationDataApp.AssemblyInfoInputs.cache
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\PopulationDataApp.AssemblyInfo.cs
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\PopulationDataApp.csproj.CoreCompileInputs.cache
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\PopulationDataApp.dll
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\refint\PopulationDataApp.dll
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\PopulationDataApp.pdb
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\PopulationDataApp.genruntimeconfig.cache
+D:\Usman\PopulationDataAPP\PopulationDataApp\obj\Debug\net8.0\ref\PopulationDataApp.dll
