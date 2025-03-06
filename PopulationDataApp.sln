@@ -6,9 +6,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PopulationDataApp", "Popula
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{97CB963A-3915-434C-916C-FB0747A278DC}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		config.txt = config.txt
 		Country.cs = Country.cs
 		DatabaseManager.cs = DatabaseManager.cs
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Global
