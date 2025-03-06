@@ -2,7 +2,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulationDataApp", "PopulationDataApp.csproj", "{2682857C-8EC6-99D9-3350-F9D28AADBB3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PopulationDataApp", "PopulationDataApp.csproj", "{2682857C-8EC6-99D9-3350-F9D28AADBB3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{97CB963A-3915-434C-916C-FB0747A278DC}"
+	ProjectSection(SolutionItems) = preProject
+		config.txt = config.txt
+		Country.cs = Country.cs
+		DatabaseManager.cs = DatabaseManager.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

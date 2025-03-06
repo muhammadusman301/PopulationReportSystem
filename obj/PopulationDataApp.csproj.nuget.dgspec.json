@@ -1,30 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Usman\\PopulationDataAPP\\PopulationDataApp\\PopulationDataApp.csproj": {}
+    "C:\\Users\\hamma\\source\\repos\\muhammadusman301\\PopulationReportSystem\\PopulationDataApp.csproj": {}
   },
   "projects": {
-    "D:\\Usman\\PopulationDataAPP\\PopulationDataApp\\PopulationDataApp.csproj": {
+    "C:\\Users\\hamma\\source\\repos\\muhammadusman301\\PopulationReportSystem\\PopulationDataApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Usman\\PopulationDataAPP\\PopulationDataApp\\PopulationDataApp.csproj",
+        "projectUniqueName": "C:\\Users\\hamma\\source\\repos\\muhammadusman301\\PopulationReportSystem\\PopulationDataApp.csproj",
         "projectName": "PopulationDataApp",
-        "projectPath": "D:\\Usman\\PopulationDataAPP\\PopulationDataApp\\PopulationDataApp.csproj",
+        "projectPath": "C:\\Users\\hamma\\source\\repos\\muhammadusman301\\PopulationReportSystem\\PopulationDataApp.csproj",
         "packagesPath": "C:\\Users\\hamma\\.nuget\\packages\\",
-        "outputPath": "D:\\Usman\\PopulationDataAPP\\PopulationDataApp\\obj\\",
+        "outputPath": "C:\\Users\\hamma\\source\\repos\\muhammadusman301\\PopulationReportSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hamma\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hamma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -32,24 +34,24 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
