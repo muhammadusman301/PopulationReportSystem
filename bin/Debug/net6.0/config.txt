@@ -1,4 +1,5 @@
-server=127.0.0.1
+server=localhost
 database=world
 user=root
-password=your_password
+password=
+SslMode=None
