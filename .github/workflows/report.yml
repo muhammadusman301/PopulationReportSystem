@@ -1,0 +1,24 @@
+name: Generate GitHub Report
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # Runs every Monday
+  push:
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: pip install requests matplotlib
+
+      - name: Run Report Script
+        run: python github_metrics.py
