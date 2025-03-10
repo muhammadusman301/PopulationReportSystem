@@ -1,0 +1,19 @@
+name: GitHub Metrics Check
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 0 * * 1'  # Runs every Monday
+
+jobs:
+  check-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Metrics Script
+        run: |
+          pip install requests
+          python github_metrics.py
