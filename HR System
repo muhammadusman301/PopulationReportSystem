@@ -2,7 +2,7 @@ import requests
 import csv
 
 # GitHub repo details
-github_repo = "your-org-or-username/your-repo"
+github_repo = "octocat/Hello-World"
 github_token = "your_github_token"
 github_api_url = f"https://api.github.com/repos/{github_repo}"
 headers = {"Authorization": f"token {github_token}"}
