@@ -1,0 +1,40 @@
+import requests
+import csv
+
+# GitHub repo details
+github_repo = "your-org-or-username/your-repo"
+github_token = "your_github_token"
+github_api_url = f"https://api.github.com/repos/{github_repo}"
+headers = {"Authorization": f"token {github_token}"}
+
+def get_commit_frequency():
+    response = requests.get(f"{github_api_url}/commits", headers=headers)
+    return len(response.json())
+
+def get_pull_requests():
+    response = requests.get(f"{github_api_url}/pulls?state=all", headers=headers)
+    return len(response.json())
+
+def get_issues_resolved():
+    response = requests.get(f"{github_api_url}/issues?state=closed", headers=headers)
+    return len(response.json())
+
+# Save data to CSV file
+def save_to_csv(data):
+    with open("github_metrics.csv", "w", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(["Metric", "Value"])
+        for key, value in data.items():
+            writer.writerow([key, value])
+
+def main():
+    metrics = {
+        "Commit Frequency": get_commit_frequency(),
+        "Pull Requests": get_pull_requests(),
+        "Issues Resolved": get_issues_resolved()
+    }
+    save_to_csv(metrics)
+    print("Metrics saved to github_metrics.csv")
+
+if __name__ == "__main__":
+    main()
