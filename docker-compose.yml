@@ -10,7 +10,7 @@ services:
       - db
     environment:
       - DB_HOST=db
-      - DB_PORT=3306 
+      - DB_PORT=3306
       - DB_USER=root
       - DB_PASSWORD=root
       - DB_NAME=world
@@ -30,7 +30,8 @@ services:
       - app_network
     volumes:
       - db_data:/var/lib/mysql
-      - ./Database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      # Add SQL initialization file if it exists
+      - ./Database/world.sql:/docker-entrypoint-initdb.d/world.sql
 
 networks:
   app_network:
