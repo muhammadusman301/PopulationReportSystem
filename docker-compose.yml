@@ -8,6 +8,12 @@ services:
       - "5000:5000"
     depends_on:
       - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306 
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=world
     networks:
       - app_network
 
@@ -16,14 +22,15 @@ services:
     container_name: population_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root  # Root password for MySQL
-      MYSQL_DATABASE: world      # Name of the database to create
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: world
     ports:
       - "3301:3306"
     networks:
       - app_network
     volumes:
       - db_data:/var/lib/mysql
+      - ./Database/init.sql:/docker-entrypoint-initdb.d/init.sql
 
 networks:
   app_network:

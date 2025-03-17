@@ -1,25 +1,27 @@
-# Use the official .NET SDK image for building the application
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
 
-# Copy the project files to the container
-COPY . ./
-
-# Restore dependencies
+# Copy csproj and restore dependencies
+COPY *.csproj ./
 RUN dotnet restore
 
-# Build the application in Release mode
-RUN dotnet build --configuration Release --no-restore
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-# Publish the application
-RUN dotnet publish -c Release -o /app/publish --no-restore
-
-# Use a smaller .NET runtime image to run the app
-FROM mcr.microsoft.com/dotnet/runtime:8.0 AS runtime
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
+COPY --from=build /app/out .
 
-# Copy the published app from the build stage
-COPY --from=build /app/publish .
+# Set environment variables for MySQL connection
+ENV DB_HOST=db
+ENV DB_PORT=3306
+ENV DB_USER=root
+ENV DB_PASSWORD=root
+ENV DB_NAME=world
 
-# Command to run the application
-CMD ["dotnet", "PopulationDataApp.dll"]
+EXPOSE 5000
+ENV ASPNETCORE_URLS=http://+:5000
+
+ENTRYPOINT ["dotnet", "PopulationReportSystem.dll"]
