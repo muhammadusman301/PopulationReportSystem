@@ -1,0 +1,10 @@
+# Ignore unnecessary files & folders
+bin/
+obj/
+node_modules/
+logs/
+.env
+*.log
+.vscode/
+.idea/
+.git
